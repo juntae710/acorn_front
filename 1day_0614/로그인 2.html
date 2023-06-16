@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        태그 선택자
+        클래스 선택자 : 특정 클래스를 가진 요소 (태그) 선택함 , 중복가능
+        선택 방법 : .클래스 이름
+        */
+        .wrap{
+            width: 400px;
+            padding: 20px;
+            border: 1px solid black;
+            margin: 0 auto;
+        }
+        .img_wrap{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            margin: 0 auto;
+            /* background-color: aqua; */
+
+            background-image: url(https://search.pstatic.net/common/?src=http%3A%2F%2Fcafefiles.naver.net%2FMjAxODA4MTVfNDIg%2FMDAxNTM0MzEwMjA4MTc3.62UJ-S6yNpFNqvupvvl9AOv-ywruTeDQUCCvvPYirXgg.nJWPF0aOfC2pKizAbaxj79qywSP394azyzZyZjOjbHwg.PNG.xkdwlswoa337%2F%25BE%25CB%25C1%25A6%25C0%25CC.PNG&type=a340);
+            background-size: cover ;
+            background-position: center;
+        }   
+        .info_wrap{
+            width: 300px;
+            padding: 20px;
+            border: 1px solid black;
+            margin: 0 auto;
+            margin-top: 5px;
+        }
+        input{
+            margin: 0 auto;
+            width: 97%;
+            height:  30px;
+            margin-top: 5px;
+        }
+        button{
+            width: 100%;
+            margin: 0 auto;
+            margin-top: 10px;
+            height: 40px;
+            border: 0px;
+            border-radius: 5px;
+            background-color: indianred;
+        }
+    </style>
+</head>
+<body>
+    <h2> 공간태그 : div</h2>
+
+    <!-- 공간을 만들때 사용 -->
+
+    <!-- 로그인 전체 영역 -->
+    <div class="wrap">
+        <!-- 로그인 이미지 영역 -->
+        <div class="img_wrap">
+            
+        </div>
+            
+        <!-- 로그인 정보 영역 -->
+        <div class="info_wrap">
+            <input type="text">
+            <input type="text">
+            <button>로그인</button>
+        </div>
+    </div>
+
+</body>
+</html>

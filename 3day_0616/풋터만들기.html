@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .footer{
+            display:  flex;
+            padding: 10px;
+        }
+        .item1{
+            width: 20%;
+            border: 1px solid black;
+            height: 200px;
+        }
+        .item2{
+            width: 40%;
+            border: 1px solid black;
+            height: 200px;
+
+        }
+        .item3{
+            width: 40%;
+            border: 1px solid black;
+            height: 200px;
+        }
+        img{
+            
+        }
+        table{
+            
+        }
+        table, td{
+            border: 1px solid black;
+            border-collapse: collapse ;
+        }
+        tr:nth-child(1){
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div class="footer">
+        <div class="item1">
+            <img src="data:image/png;base64,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" alt="">
+        </div>
+        <div class="item2">
+            (주)지에스리테일 대표이사 허연수, 김호성 / 주소: 서울특별시 강남구 논현로 508 (역삼동, GS타워) <br> 
+            사업자등록번호 : 116-81-18745>/ 통신판매업신고 : 제2014-서울강남-01544호 사업자정보확인 <br> 
+            개인정보 보호책임자 : 이종혁 / 호스팅제공자 : ㈜지에스리테일 <br>
+            고객센터(유료) : 1899-4455 / 02-2007-4545 / 팩스 : 02-393-6093 / 이메일문의 : gsshop@gsretail.com <br>
+          
+          >Copyright ©️ GS Retail Co.,Ltd. All Rights Reserved
+        </div>
+        <div class="item3">
+           <table>
+                <tr>
+                    <td>123</td>
+                    <td>123</td>
+                </tr>
+                <tr>
+                    <td>123</td>
+                    <td>123</td>
+                </tr>
+           </table>
+<!--             
+            기업은행 채무지급보증안내 <br>
+        전자상거래등에서의 소비자보호에 관한 법률에 따라  기업은행과 채무지급보증 계약을 체결하여 고객님의 <br>
+        결제금액에 대해 안전거래를 보장하고 있습니다. <br>
+        
+         사실가입신청확인 -->
+        </div>
+    </div>
+</body>
+</html>
