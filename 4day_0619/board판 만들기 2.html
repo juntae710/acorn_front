@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .board {
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+            position: relative;
+        }
+        .box {
+            height: 50px;
+            width: 50px;
+            background-color: blue;
+            position: absolute;
+            color: white;
+            display: inline-block;
+            text-align: center;
+            line-height: 50px;
+        }
+        .box_a {
+            left: 20px;
+            top: 20px;
+        }
+        .box_b {
+            left: 120px;
+            top: 120px;
+        }
+        .box_c {
+            left: 220px;
+            top: 220px;
+        }
+        .box_d {
+            left: 320px;
+            top: 320px;
+        }
+        .box_e {
+            left: 420px;
+            top: 420px;
+        }
+        .box:hover{
+            position: relative;
+            left: 100px;
+            top: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="board">
+        <div class="box box_a">H</div>
+        <div class="box box_b">E</div>
+        <div class="box box_c">L</div>
+        <div class="box box_d">L</div>
+        <div class="box box_e">O</div>
+    </div>
+</body>
+
+</html>

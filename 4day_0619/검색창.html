@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            width: 300px;
+            height: 50px;
+            border: 1px solid black;
+            display: flex;
+            
+        }
+        .input{
+            width: 220px;
+            margin-left: 10px;
+            margin-top: 15px;
+            border: 0;
+            outline: 0;
+        }
+        .button{
+            height: 40px;
+            width: 40px;
+            margin-left: 10px;
+            margin-top: 5px;
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAkFBMVEX///8aGhoAAAAbGxsYGBgVFRUoKCgmJiYWFhYeHh4iIiIqKiqVlZUSEhIODg6IiIiBgYH29vbq6urw8PDU1NT09PTi4uKfn58JCQnIyMjPz884ODjX19cvLy8yMjJPT0+xsbFbW1u7u7uoqKhxcXFnZ2dDQ0O/v794eHg/Pz9OTk5XV1eZmZmPj49sbGyzs7M/0DkAAAALbElEQVR4nO1d6ZrqIAy10Ja22GrVqXXfl1l9/7e71BW66YwE1Nvzb76ZAU4DSQiB1GoVKlSoUKFChQoVKlSoUEED2lHU30wXXYbFbtOJWm3dI5KHVn+xna3tGCHfCtAJ/uhj1Zh33nSP7l5Eu+XYQigOfAvbtucaZ5iWn9DF68bmaVmGm2ZCzjIZH0xcSigxMnB8RnPwNdQ92N8j3GyZiJwTkYSfi7MED2Afgjaei+SwQVF8pmdg16A29ooIHkmuuy3d474V8wlC1mXwnktswyClBBP4yF8+hSAXHgqEkXuUkpwVmAMnRh893eO/gnDh8uI7MLQJpTcxZAjQ+qE5zkcX5XICsxKE2rcyTCbrrK+bRxH6k4z89hQ9QgrVaL4clw/p8ITb1Pq7AyhY6KaTxRyhqwN3HMv3fctyzKt/id4j3YxEtJfZBcgPeO+Pxu5o8L5evw+osf/RLyMaoK5uUjx6tFiAzJYjMmt2N0O2nwhDNp3f2q1oOK9vPxjvuJglmj2OB/CF/IJRMq+TNqetMP//3oaLH4Ry1VOC2H0QwxHOCgTI6H0srsqhUx8VkbTQtwoC1xCNcwk6zNG8Tu+A4fe4QA+jVYH4FaLv543NQc6284tWws0MxbkUJ7oX4zxvgpko+Pr1wIbbXI7xWK/ZmOYYCROhrz/NrWiZN1eDQCfFBcoq+xg1/7x2olmOVraQvj3VIqtjHDS765NvBtk2reA3S1omptnBxHh6Z6NhIytG39UjxXl2ikpxQ/pZB8nydGjUfkbJ+JJcyXCZ/nbYJ+rtYmSlzUQ8krZcFpmZGk9ktX0rwkFasaNPidvWvpdpfiuv9ZuwSq8VtJTafus904HaTfFXpv+G5B7Cj1QXJlJpM3opVWBCbFfTWxbLUKdt2qOUIoDZj6dXAlpB9JKLZbproIBDhuIOpp8MNumOZa/BE8KJuNtwDDWGP0yZeslaVOhqJBoNRfN0K4ow/gTsq5X+mhvAzk7oiAT9EWh8uif2ZlEF+nSSmjjAVipleVEdtrtasqMQewSP285EbYOgjzTCsWAK4xlwf8z4eoKLD+6fitt6x1SgvsVZYyLgsE3qg05heztgJcxTQOOUQAxcBJCG4oK24AWbMagQbV6EpqogmLg0UBOwq426rgS88+rNjAHV6SdvC02kLF0r9WXhLNRQWBAKjO8ZgpthUbB+GvyndNSJMCNEqGSNcMzrGZUirNXWfNfxD1Avghfs+EqDtHP+ONxEQP73lre8qqN7hHDJqWgO04nP79WURr4YuvwEimF2wsIk9dcgfRSjJSwRAmISBU2qOD7LMOMNBgLJ0nCFSar8MGgnfGAId6qldZKy/gNOm/ofAD0I2zQdKVn8NDUh5tDJVuAkkxJ6G5oHYYcBEXQbHLwK7LrYcDz57V/FUGAoP1uqZTpHhkyIserDvD14pzGQHyA6h0kxY6jeViRYcQvRwdKbF+IXOpZheiFKt/lNrnnH1ZJP14NVNbyuVhSBSqMF61StuVCJHkVTq1mcVyVdmbYp3/qX5NZvBP+VA9nbi4hPO4fanl3DktugWgPJjUfCGtCULMifQ5mx5MY7+o1F2mJJbpzX1KaK85g8zBF3S1M2Q3535tiariX1kHsJ1sg2+bw/YY013U3uCwwlTySB4UDTFYEhpDLoPh5DyQr9ARlKluFDzFJQk8WbIgs2haYYfYGhZE3Dx6GA4rHXIZxAyT67ECy+r8mn2UH6NKCL/FYsIBmKnrem6+TfQpxBcuMtg98fTiW3fiP4UJT0qPsbH8rTdbVzwI0hlp44NPEhW78N/Dmw/DjDD7e/1nAuk0DUBVPZzfOrXGEmDQ/RHEo/g97oV6biR5buOYoGUct7B1zakGeOpTcfepy5kB7KuwVtchwBJoRiAGX3wSlTU7ZDcQsufjcZEQdgFn0jjM9xIB0L8ZwpgW2XxgDJLkkY6BwlAbsmU4LzJHIJJWOA7U3IM7SI/A6ugLeGrgGSQb/2ubeQ1E/TOrwyF/Ku1OUHnzDg84RhzhUEp0nJ9RweQoxG+rHMEQMhvVTx+dNSSIwEmkHCSlB8DhwqSRKOxF6Upl8KXxdOkwv55GCpyHkQfEbABOzUzQ6F8aiu2DPY6V4b818SKFE3DyG1OJcRIB/qDPGCrLrD7i+UpGKdKMKkzx4g6BoTq1KnrcAx3DND/x2yLy5vCBPbUmQTk/v/nAhBk+q4sxFiE0yVxGuEAxnDGsF2ejQYxLU9SrEa75SKtzqBIyjH72lTz4Ze9Cc0RBGCvzaUXFn1sEu9/QPrFnyWYuodFfjU1iHyPOqxeXrsENoopt5RAbyZd8bWGXmUS/oAXhapV2pULIu2jSm9PD9uwvYpLkJFftQOUU6GhmUA+qc7kaCj6PR5wmUmMQQQca8D0q81qYq1R6knVWKoo6ih+L6BEUDcBcpF+kVIBOOgRpTYQr0BhdfJMg84zQDMYuR6VCyoEKuLQ7dp+rGvT+nO4pC5TenX6hWG2vspIeJ4LVnd9JjTlK03oJCiGFYwsBt4UhX5zk+O0DIMVUaiU2+2YezLjKA2ECXC7W0dFDPvlDvSklDas5ip0YKKEeomavs983CzpMe3e9RhEix8cF8dxZabefA3diS8+9eIPdstq/mhkGL2TWPn7peE+wSNXLu8sJC6tRg52de347uSlVpLhA2P4itVW9RJcUhyHlFHg78q1bc6TkpfGcXVvdRTjGgORR+t/8Ix7FLkjey86mw6KbZzaz/4aPBblfP2nVSKYirmxtpQOu3iHmZsfv/Cyen/7MvQMV/bpnl2Xi/FZk59hCTQgdHnbSU8ovrgUvjBu7k0lEIfdZqxGh6htufiAKHP7rB0Y9XuNdbFlWYehuLQFmeqa9NjuUqTkRzNvnq5E3a4aXx4qLAKz0NRZH74WQyut5fgZRz74qPB4Ke+2G16nU6n39vsFo3ZKE6qkRZXiQri6yWyVOa8zMlpPITYNs5oC8ePkYDAKi3c5aCP1vFSLMbF9lGlFNvL/XTD+4D/1WqO14D8JKp2SE/YvzXyCBRrvQFy9x6lfaO+L4SFVoeFu6dYylBxDmEXMYN9Lz3Gj57D6PXHWovM8Wq6+LaCnCX87CnX4sNRrEVNXFpFLweY00s+Gi1E+3kLRcXJrq2G9TsTd8myCNB6mvEPHpBi7W0xKKv6l4br7hlaCM1yj7HyKLqecHaiIWW5s435ksflYASTKoKFhcyyFLHNNlm8SVKf7prUivuhzK7fIMqkwOWgUZYHmKXI/ELRJulIPGeztd+YME8mKJGlxX5PVt1ryVVpimyTlTa6eijWkr1DfUUPVUcFokcvbrDtDm85DhApuhRn4+HaKCZ4603rP2vMu6X2ZNvdlW+sBPAUk21yjl+oYy1mELZbUVJv9Q//eqGImZLJrWP+EBTvwImiZycSzPVUtU5UCThQ9GhJDeznp5hk06UPhl+MYvpk/wXXoo2v7K6fX4pXt5/PT/Eaw/+C4tOvxYri/zFRK4qPjv9oLZYc+L+IFF232AN4CYq4jOFrUMzfJ77aWvzPKb7ERP3/KLrCFvIFKRJbDOS83lpMsqpEii8mRWzbdir79sUoUjcbi3slipgwEWaVj9oqePJxoWiyGUryEgl0vdYpC+edBrGpbeR5qpb8593U4pA9xZRM7hWNvRCnusd4J5gUCaYezVmDBwQT3UO8F3VE7bKAP3AVYRVgFEuTlVRckQZGHRVfszF0PWYpF+U7jWc3iXuUUnwJhqUUn95cHFBCUVf1H9kopAj9qo06FFFUXb4YEPkUTV2lACBwpvhKoQwR54D/hWLw7FuLFA4UuYB/4GkqwQWGbpKGfc6tNtH41QjWap33c1arhZ49SlOA+cw6pHmOmy+kRUW0+ouvX6WwVqhQoUKFChUqVKhQoUKFHPwDk+GWXyalLsMAAAAASUVORK5CYII=);
+            background-size: cover;
+            border: 0;
+            outline: 0;
+
+        }
+        .img{
+            width: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div>
+            <input class="input" type="text" placeholder="검색내용을 적어주세요.">
+        </div>
+        <div>
+            <button class="button"></button>
+        </div>
+    </div>
+    
+</body>
+</html>
