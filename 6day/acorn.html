@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+            /* border: 1px solid black; */
+            width: 1200px;
+            display: flex;
+            margin: 0 auto;
+            margin-top: 25px;
+        }
+        header > div > img{
+            margin-right: 290px;
+        }
+        li{
+            list-style: none;
+        }
+        .h_ul{
+            display: flex;
+            margin: 0;
+            margin-top: 12px;
+            padding: 0px;
+            padding-left: 30px;
+
+        }
+        .h_ul > li{
+            list-style: none;
+            margin-right: 10px;
+            
+        }
+        .h_ul > li > a{
+            color:gray; 
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .login:after{
+            content:'|';
+            font-size: 10px;
+            color: #6c6c6c;
+            padding: 0 5px;
+        }
+        nav{
+            
+            margin: 0;
+            margin-top: 25px;
+            border-top: 1px solid gray;
+            /* border-bottom: 1px solid gray; */
+            
+        }
+        .nav_d{
+            margin: 0 auto;
+            width: 1200px;
+
+        }
+        .nav_u{
+            display: flex;
+            height: 70px;
+            width: 1200px;
+            
+        }
+        .nav_u:hover ul{
+            display: block;
+            background-color: rgb(255, 255, 255);
+            border: 1px solid black;
+          
+
+            position: relative;
+            z-index: 9999;
+
+        }
+        .u2{
+            
+            margin: 0;
+            padding: 0px;
+            
+        }
+        nav ul{
+            /* width: 200px; */
+            text-align: center;
+            margin: 0;
+            padding: 0px;
+        }
+        .nav_s{
+            /* height: 50px; */
+            border-bottom: 1px solid black;
+            display: block;
+            padding-top: 25px;
+            padding-bottom: 25px;
+            font-weight: 700;
+            font-size: 18px;
+            width: 200px;
+         }
+        nav a{
+            display: block;
+            padding: 10px;
+            font-size: 13px;
+            
+            color:black; 
+            text-decoration: none;
+         }
+        .nav_l > ul{
+            display: none;
+        }
+        .hover{
+            width: 197.5px;
+            height: 400px;
+        }
+        .home{
+            width: 1200px;
+            margin-top: 40px;
+            text-align: right;
+            
+        }
+        .home_p{
+            font-size: 14px;
+            color: gray;
+        }
+        .home_s{
+            font-weight: 1000;
+        }
+        table{
+            margin: 0 auto;
+            margin-top: 80px;
+            width: 1200px;
+            border-collapse:  collapse;
+        }
+        thead{
+            text-align: center;
+            height: 60px;
+
+        }
+        
+        td{
+            height: 50px;
+            border: 1px solid rgb(202, 198, 198);
+            
+        }
+        
+        td:nth-child(1){
+            text-align: center;
+            width: 85px;
+            background-color: rgb(248, 248, 248);
+            font-weight: 600;
+        }
+        .red{
+            padding: 3px;
+            background-color: red;
+            color: white;
+            font-size: 13px;
+        }
+        .gray{
+            padding: 3px;
+            background-color: gray;
+            color: white;
+            font-size: 13px;
+        }
+        .top{
+            font-size: 20px;
+        }
+        .row{
+            width: 1200px;
+            margin: 0 auto;
+            margin-top: 150px;
+        }
+        .row_ul{
+            display: flex;
+            /* border: 1px solid black; */
+            font-weight: 700;
+            font-size: 16px;
+            text-align: center;
+            padding: 0px 0px 0px 25px;
+    
+        }
+        .row_ul li{
+            padding-top: 20px;
+            padding-bottom: 20px;
+            width: 180px;
+            border: 1px solid black;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="h_img1"><img src="https://www.acorncampus.co.kr/img/tel.png" alt=""></div>
+        <div><img src="https://www.acorncampus.co.kr/img/logo3.png" alt=""></div>
+        <div>
+            <ul class="h_ul">
+                <li class="login"><a href="">로그인 </a></li>
+                
+                <li><a href="">회원가입</a></li>
+              
+            </ul>
+        </div>
+    </header>
+    <nav>
+        <div class="nav_d">
+            <ul class="nav_u u2">
+                <li class="nav_l"><span class="nav_s">학원소개</span>
+                    <ul class="hover">
+                        <li><a href="https://www.acorncampus.co.kr/info/info.jsp">소개</a></li>
+                        <li><a href="https://www.acorncampus.co.kr/info/info.jsp">연혁</a></li>
+                        <li><a href="https://www.acorncampus.co.kr/info/acorn-press.jsp?flag=press">언론보도</a></li>
+                        <li><a href="https://www.acorncampus.co.kr/info/teacher.jsp">강사진</a></li>
+                        <li><a href="https://www.acorncampus.co.kr/info/manager.jsp">매니저</a></li>
+                        <li><a href="https://www.acorncampus.co.kr/info/map.jsp">위치</a></li>
+                    </ul>
+                </li>
+                <li class="nav_l"><span class="nav_s">직무교육</span>
+                    <ul  class="hover">
+                        <li><a href="https://www.acorncampus.co.kr/business/newtech.jsp">개강일정</a></li>
+                        <li><a href="https://www.acorncampus.co.kr/business/process.jsp?seq=23">도커(DOCKER)</a></li>
+                        <li><a href="https://www.acorncampus.co.kr/business/process.jsp?seq=28">AWS</a></li>
+                        <li><a href="https://www.acorncampus.co.kr/business/process.jsp?seq=30">SQL튜닝</a></li>
+                        <li><a href="https://www.acorncampus.co.kr/business/process.jsp?seq=31">Python</a></li>
+                    </ul >
+                </li>
+                <li class="nav_l"><span class="nav_s">취업교육</span>
+                    <ul  class="hover">
+                        <li><a href="https://www.acorncampus.co.kr/ncs/schedule.jsp">일정</a></li>
+                        <li><a href="https://www.acorncampus.co.kr/ncs/quick-view.jsp">국비지원 간편조회</a></li>
+                    </ul>
+                </li>
+                <li class="nav_l"><span class="nav_s">에이콘 스토리</span>
+                    <ul class="hover">
+                        <li><a href="https://www.acorncampus.co.kr/jobstory/job-story.jsp">수강생 스토리</a></li>
+                        <li><a href="https://www.acorncampus.co.kr/acornstory/student-story.jsp">수강평 스토리</a></li>
+                        <li><a href="https://www.acorncampus.co.kr/acornstory/acorn-story.jsp">에이콘 스토리</a></li>
+                        <li><a href="https://www.acorncampus.co.kr/jobstory/joblec-story.jsp">취업특강 스토리</a></li>
+                    </ul>
+                </li>
+                <li class="nav_l"><span class="nav_s">취업센터</span>
+                    <ul class="hover">
+                        <li><a href="https://www.acorncampus.co.kr/jobstory/job-support-system.jsp">취업지원시스템</a></li>
+                        <li><a href="https://www.acorncampus.co.kr/jobstory/job-search.jsp">채용정보</a></li>
+                        <li><a href="https://www.acorncampus.co.kr/jobstory/job-status.jsp">구인으뢰</a></li>
+                        <li><a href="https://www.acorncampus.co.kr/jobstory/job-status.jsp">취업현황</a></li>
+                        <li><a href="https://www.acorncampus.co.kr/jobstory/job-consulting.jsp">취업컨설팅</a></li>
+                    </ul>
+                </li>
+                <li class="nav_l"><span class="nav_s">고객센터</span>
+                    <ul class="hover">
+                        <li><a href="https://www.acorncampus.co.kr/customer/notice.jsp?flag=notice">공지사항</a></li>
+                        <li><a href="https://www.acorncampus.co.kr/customer/notice.jsp?flag=service">교육지원 서비스</a></li>
+                        <li><a href="https://www.acorncampus.co.kr/customer/contact-us.jsp">QnA</a></li>
+                        <li><a href="https://www.acorncampus.co.kr/customer/online-pay.jsp">결제시스템</a></li>
+                        <li><a href="https://www.acorncampus.co.kr/customer/online.jsp">온라인문의</a></li>
+                        <li><a href="https://www.acorncampus.co.kr/customer/recruitment.jsp">가족모집</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="home">
+        <p class="home_p">
+            <a href="https://www.acorncampus.co.kr/index.jsp"
+            style="color:gray; text-decoration: none;">
+                홈 <span class="home_s">></span></a>
+              취업교육 <span class="home_s">></span> 일정
+        </p>
+    </div>
+    <section>
+        <table>
+            <thead>
+                <tr>
+                    <th><span class="top">월</span></th>
+                    <th><span class="top">🔵홍대캠퍼스</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1월</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2월</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3월</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4월</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5월</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>6월</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>7월</td>
+                    <td style="padding: 10px;">
+                        <p style="margin: 0; margin-bottom: 5px;">
+                        <span class="red">7월 10일</span>
+                        <span class="gray">6개월</span>
+                        </p>
+                    <a style="  color:black; text-decoration: none;" href="https://www.acorncampus.co.kr/ncs/ncs-education.jsp?seq=219">현직 개발자와 함께하는 JAVA 풀스택 웹개발 + 빅데이터 AI (13기)</a></td>
+                </tr>
+                <tr>
+                    <td>8월</td>
+                    <td style="padding: 10px;">
+                        <p style="margin: 0; margin-bottom: 5px;">
+                        <span class="red">8월 30일</span>
+                        <span class="gray">6개월</span>
+                        </p style>
+                    <a style="  color:black; text-decoration: none;" href="https://www.acorncampus.co.kr/ncs/ncs-education.jsp?seq=220">현직 개발자와 함께하는 JAVA 풀스택 웹개발 + 빅데이터 AI (14기)</a></td>
+                </tr>
+                <tr>
+                    <td>9월</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>10월</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>11월</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>12월</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section class="row">
+        <ul class="row_ul">
+            <li><a href="https://www.acorncampus.co.kr/ncs/quick-view.jsp">국비대상자 간편조회</a></li>
+            <li><a href="https://www.acorncampus.co.kr/business/newtech.jsp">개강일정(IT직무교육)</a></li>
+            <li><a href="https://www.acorncampus.co.kr/ncs/schedule.jsp">개강일정(실업자교육)</a></li>
+            <li><a href="https://www.acorncampus.co.kr/customer/online-pay.jsp">온라인 결제안내</a></li>
+            <li><a href="https://www.acorncampus.co.kr/info/map.jsp">위치</a></li>
+            <li><a href="https://www.acorncampus.co.kr/info/facilities.jsp">시설 및 장비</a></li>
+        </ul>
+    </section>
+    <!-- <section>
+        <ul>
+            <li></li>
+        </ul>
+    </section> -->
+    <!-- <footer></footer> -->
+    <!-- <div></div> -->
+</body>
+</html>

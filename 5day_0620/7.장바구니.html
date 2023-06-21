@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .home{
+            width: 900px;
+            height: 50px;
+            border-top: 1px solid rgb(167, 175, 172);
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+        .span_h{
+            color: rgb(33, 40, 47);
+        }
+        table{
+            border-collapse:  collapse;
+            border: 1px solid black;
+            margin-left: 45%;
+            margin-top: 150px;
+            font-size: 12px;
+        }
+        th{
+            width: 80px;
+            height: 25px;
+            border: 1px solid gray;
+            background-color: rgb(221, 235, 230);
+            
+        }
+        td{
+            width: 80px;
+            height: 25px;
+            border: 1px solid gray;
+        }
+        :nth-child(4){
+            width: 120px;
+        }
+        .del{
+           text-align: centers; 
+        }
+        .a{
+            text-align: center;
+        }
+        .b{
+            text-align: center;
+            background-color: red;
+        }
+        .order{
+            color: white;
+        }
+        img{
+            width: 40px;
+        }
+        caption{
+            font-size: 15px;
+            font-weight: 1000;
+        }
+    </style>
+</head>
+<body>
+    <div class="home">
+        <img src="./홈.png" alt="">
+        <span class="span_h">홈으로</span>
+    </div>
+    <div class="wrap"></div>
+    <table class="list">
+        <caption>
+            <caption>CART LIST<img src="./장바구니.png" alt=""></caption></caption>
+            
+        <thead>
+            <tr>
+                <th>주문날짜</th>
+                <th>제품명</th>
+                <th>단가</th>
+                <th>수량</th>
+                <th>금액</th>
+                <th>삭제</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="a">삭제</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="5"></td>
+                <td class="b"><span class="order">주문하기</span></td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
