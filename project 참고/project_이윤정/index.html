@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>postype</title>
+</head>
+
+<style>
+
+    header{
+        height: 60px;
+        display: flex;
+        margin: 0 auto;
+    }
+
+    .containerpool{
+        margin: 0 auto;
+        display: flex;
+    }
+
+    .container{
+        width: 340px;
+        height: 48px;
+        margin-top: 5px;
+        margin-left: 5px;
+        align-items: center;
+        display: flex;
+    }
+
+    .navbar{
+        width: 500px;
+        height: 40px;
+        margin-top: 10px;
+        margin-left: 5px;
+
+        position: relative;
+        
+    }
+
+    .mnav{
+        width: 157px;
+        height:45px;
+        margin-top: 5px;
+
+        display: flex;
+      
+    }
+
+    .logoimg{
+        width: 107px;
+        height: 28px;
+        margin-top: 10px;
+    }
+
+    h2{
+        margin-top: 10px;
+    }
+
+    .text_alpha{
+        width: 33%;
+        height: 48px;
+        text-align: center;
+    }
+
+    a{
+        font-size: 18px;
+        line-height: 40px;
+    }
+
+    .a_gray{
+        color: gray;
+    }
+
+    .searchform{
+        width: 260px;
+        height: 40px;
+        border: 1px solid rgb(224, 224, 224);
+        background-color: rgb(224, 224, 224);
+        border-radius: 30px;
+        text-align: center;
+
+        position: absolute;
+        right: 0px;
+
+        display: flex;
+        align-items: center;
+       
+    }
+
+    .searchimg{
+        width: 20px;
+        height: 20px;
+        padding-left: 10px;        
+    }
+
+    input{
+
+        width: 190px;
+        height: 25px;
+        font-size: 15px;
+
+        border: 0px;
+        outline: 0px;
+
+        margin-left: 10px;
+        padding-left: 10px;
+
+        background-color: rgb(224, 224, 224);
+
+      
+
+    }
+
+    .text_alp{
+        width: 80px;
+        height: 50px;
+        text-align: center;
+        
+    }
+
+    .section1{
+        height: 450px;
+        margin: 0 auto;
+    }
+
+    .swipherhome{
+        width: 1020px;
+        height: 450px;
+
+        margin: 0 auto;
+
+        display: flex;
+    }
+
+    .swiphersection{
+        width: 33%;
+        height: 400px;
+
+        margin: 15px;
+        
+    }
+
+    .swipher{
+        width: 300px;
+        height: 200px;
+        border: 1px solid gray;
+        border-radius: 10px;
+
+        margin: 0 auto;
+
+    }
+
+
+    .swipher:hover{
+        box-shadow: 0px 0px 10px 0px gray;
+    }
+
+    .swipherimg{
+        width: 300px;
+        height: 200px;
+        border-radius: 10px;
+        margin-left: 5px;
+
+        text-align: center;
+    }
+
+
+    .swipherimg:hover{
+        box-shadow: 0px 0px 10px 0px gray;
+    }
+
+    .item_label{
+        margin-top: 20px;
+        margin-left: 15px;
+        font-size: 14px;
+        font-weight: bold;
+        color: #3478FF;
+    }
+
+
+    .section2{
+        height: 450px;
+    }
+
+    .section2home{
+        width: 1020px;
+        height: 450px;
+
+        margin: 0 auto;
+
+    }
+
+    .list_container{
+        width: 980px;
+        height: 30px;
+        margin: 0 auto;
+    }
+
+
+    .post_container_box{
+        width: 980px;
+        height: 410px;
+        margin: 0 auto;
+        display: flex;
+
+        position: relative;
+    }
+
+
+    .pool_post_container{
+        width: 460px;
+        height: 180px;
+        border: 1px solid gray;
+        border-radius: 20px ;
+        position: absolute;
+
+        margin: 15px;
+        margin-top: 10px;
+
+    }
+
+    .pool_post_container2{
+        margin-top: 10px;
+        right: 0px;
+    }
+
+    .pool_post_container3{
+        bottom: 0px;
+    }
+
+    .pool_post_container4{
+        bottom: 0px;
+        right: 0px;
+    }
+
+
+    .pool_post_text{
+        width: 310px;
+        height: 180px;
+    }
+
+    h3{
+        width: 430px;
+        margin-left: 15px;
+
+        position: absolute;
+    }
+
+    p{
+        color: rgba(0,0,0,.47);
+        margin-left: 15px;
+        margin-top: 80px;
+        font-size: 15px;
+
+        position: absolute;
+    }
+
+    .tagimg{
+        width: 95px;
+        height: 95px;
+        right: 10px;
+        top: 60px;
+        border-radius: 5px;
+
+        position: absolute;
+    }
+
+    footer{
+        height: 300px;
+    }
+
+
+    .footer_home{
+        width: 1020px;
+        height: 200px;
+
+        margin: 0 auto;
+    }
+
+    .footer_container_box{
+        width: 980px;
+        height: 200px;
+
+        margin: 0 auto;
+    }
+
+    .footer_box{
+        width: 980px;
+        height: 200px;
+        border: 1px solid rgba(0,0,0,.1);
+        border-radius: 20px;
+        background-color: #F7F7F7;
+
+    }
+
+    .footer_smallbox{
+        width: 600px;
+        height: 200px;
+
+        margin: 0 auto;
+
+        position: relative;
+
+        display: flex;
+    }
+
+    .footer_img{
+        width: 180px;
+        height: 165px;
+        margin-left: 15px;
+        margin-top: 15px;
+
+    }
+
+    .title{
+        font-size: 25px;
+        font-weight: bold;
+        padding-top: 30px;
+        padding-left: 220px;
+
+        position: absolute;
+    }
+
+
+    .description{
+        width: 300px;
+        height: 30px;
+        margin-left: 220px;
+        font-size: 14px;
+        color: rgba(0,0,0,.47);
+        margin-top: 70px;
+
+        position: absolute;
+    }
+
+    .btn-primary{
+        margin-left: 30px;
+        margin-top: 120px;
+        border: 0.5px solid gray;
+        top: 150px;
+        width: 100px ;
+        height: 40px;
+        color: white;
+        background-color: #3478ff;
+        border-radius: 5px;
+        text-align: center;
+        line-height: 35px;
+    }
+
+    .btn-third{
+        margin-left: 5px;
+        border: 0.5px solid gray;
+        top: 150px;
+        width: 100px ;
+        height: 40px;
+        color: white;
+        background-color: #3478ff;
+        border-radius: 5px;
+        text-align: center;
+        line-height: 35px;
+    }
+
+
+    .btn-second{
+        margin-left: 10px;
+        margin-top: 120px;
+        border: 0.5px solid black;
+        top: 150px;
+        width: 113px ;
+        height: 40px;
+        color: black;
+        background-color: white;
+        border-radius: 5px;
+        text-align: center;
+        line-height: 35px;
+    }
+
+
+</style>
+
+<body>
+
+    <header>
+        <div class="containerpool">
+            <div class="container">
+                <h2>POSTYPE</h2>
+                <div class="text_alpha">
+                    <a>홈</a>
+                </div>
+                <div class="text_alpha">
+                    <a class="a_gray">구독</a>
+                </div>
+                <div class="text_alpha">
+                    <a class="a_gray">보관함</a>
+                </div>
+            </div>
+            <div class="navbar">
+                <div class="searchform">
+                    <img class="searchimg" src="https://svgsilh.com/png-1024/1093183.png" alt="">
+                    <input type="">
+                </div>
+            </div>
+            <div class="mnav">
+                <div class="text_alp">
+                    <a>로그인</a>
+                </div>
+                <div class="text_alp">
+                    <div class="btn-third"><a>회원가입</a></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+
+    <div class="section1">
+        <div class="swipherhome">
+            <div class="swiphersection">
+                    <img class="swipherimg" src="https://d3mcojo3jv0dbr.cloudfront.net/2023/05/30/12/21/06402252defb96033dadc979979fd9cc.png?w=640&h=384&q=65" alt="">
+                <div class="swipher">
+                    <div class="item_label">포스타입 가이드</div>
+                    <h3>2023 크리에이터 <br> 이코노미 가이드</h3>
+                    <p>첫 걸음을 내딛는 <br>크리에이터를 위한 팁!</p>
+                </div>
+            </div>
+            <div class="swiphersection">
+                    <img class="swipherimg" src="https://d3mcojo3jv0dbr.cloudfront.net/2023/05/30/12/19/45b5d645de74626294e9a43c10c6ce91.png?w=640&h=384&q=65" alt="">
+                <div class="swipher">
+                    <div class="item_label">포스타입 컬렉션</div>
+                    <h3>포스타입 스토어 컬렉션</h3>
+                    <p>포스타입 스토어에 등록된 <br> 순수창작 상품을 만나 보세요!</p>
+                </div>
+            </div>
+            <div class="swiphersection">
+                <img class="swipherimg" src="https://d3mcojo3jv0dbr.cloudfront.net/2023/05/30/12/19/3853417c470a5c3e2c8eb4d17c21b839.png?w=640&h=384&q=65" alt="">
+                <div class="swipher">
+                    <div class="item_label">창작 주제 무한 제공</div>
+                    <h3>크리에이터 N제</h3>
+                    <p>아이디어가 부족해도 괜찮아, <br> 에디터 추천 키워드가 있잖아요!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section2">
+        <div class="section2home">
+            <div class="list_container">
+                <b>이런 콘텐츠는 어떠세요?</b>
+            </div>
+            <div class="post_container_box">
+                <div class="pool_post_container">
+                    <h3>chatGPT를 어떻게 쓰면 잘 썼다고 소문이 <br>날까?(1)</h3>
+                    <p>chatGPT에 대한 글들이 범람하고 있습니다.하<br>
+                        지만, 수많은 글들 중에 실제로 '잘'사용하기 위<br>
+                        한 가이드는 찾기가 어렵습니다. 이에 실제 사...</p>
+                <img class="tagimg" src="https://d3mcojo3jv0dbr.cloudfront.net/2023/02/07/17/35/6453329e18de84a0134cef12d991dd35.png?w=120&h=120&q=65" alt="">
+                </div>
+                <div class="pool_post_container pool_post_container2">
+                    <h3>ADHD, 영국에서 관리하기</h3>
+                    <p>이전 포스팅에서 언급한 적 있듯, 저는 ADHD를 <br>
+                        진단받고 '콘서타'라는 약을 복용하고 있습니다. <br>
+                        이번 포스팅은 개인적인 이야기가 들어있어, <br>
+                        필요하신 분들만 보실 수 있도록 소액을... <br>
+                    </p>
+                </div>
+                <div class="pool_post_container pool_post_container3">
+                    <h3>소재 사용권 이용약관</h3>
+                    <p>[ 쿠단 클립스튜디오 소재 이용권 이용약관] 쿠<br>
+                        댠 클립스튜디오 소재 사용권 계약서(이하 "사용<br>
+                        권 게약서")는 쿠댠이 개발, 판매, 배포한 클립...</p>
+                <img class="tagimg" src="https://d3mcojo3jv0dbr.cloudfront.net/2023/04/05/01/04/f458041871472133906133727.png?w=240&h=180&q=65" alt="">
+                </div>
+                <div class="pool_post_container pool_post_container4">
+                    <h3>잘먹는나-6화 3대째 먹는 만두</h3>
+                <img class="tagimg" src="https://d3mcojo3jv0dbr.cloudfront.net/2023/06/11/22/00/1cf47f619f2a4c4d0ac7a5b17e6ac12a.jpeg?w=240&h=180&q=65" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer_home">
+            <div class="footer_container_box">
+                <div class="footer_box">
+                    <div class="footer_smallbox">
+                        <img class="footer_img" src="https://d33pksfia2a94m.cloudfront.net/assets/img/guide/pool-main-banner-image.svg">
+                        </img>
+                        <div class="title">
+                            자유로운 창작, 더 높은 수익
+                        </div>
+                        <div class="description">
+                            크리에이터 커뮤니티 포스타입에서<br>
+                            팬을 모으고 콘텐츠로 수익을 올려보세요.
+                        </div>
+                        <div class="btn-primary">
+                            무료로 시작
+                        </div>
+                        <div class="btn-second">
+                            포스타입 소개
+                        </div>
+                    <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
