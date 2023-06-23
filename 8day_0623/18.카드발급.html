@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let m = parseInt(prompt("카드 사용 금액을 적으시오."))
+        // let mn = parseInt(m)
+        let grade;
+
+        if( m >= 500000){
+            grade="당신은 VVIP 입니다.";
+        }else if( m >= 300000){
+            grade= "당신은 VIP 입니다.";
+        }else{
+            grade= "당신은 bronze 입니다.";
+        }
+
+        alert(grade);
+
+    </script>
+</body>
+</html>
