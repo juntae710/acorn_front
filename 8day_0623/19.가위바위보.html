@@ -13,23 +13,24 @@
         let pc = 1
 
         // let pc =Math.floor(Math.random()*3) ;  
-        
-        if (user == pc){
-            for(user!=pc;){
-                prompt("무엇을 낼지 정하시오.", "ex)가위, 바위, 보");
-        }}
-        if (( user + pc == "02") || ( user + pc == "10") ||  (user + pc == "21")){
+        while(true){
+            if (user == pc){
+           prompt("무엇을 낼지 정하시오.", "ex)가위, 바위, 보")
+        }else if (( user + pc == "02") || ( user + pc == "10") ||  (user + pc == "21")){
             d="승리";
         }else{
             d="패배";
         };
+            
+            
+            
+            break;}
+    
+        
+        
         alert(d);
 
 
-        // while(user == pc){
-        //     prompt("무엇을 낼지 정하시오.", "ex)가위, 바위, 보")
-        //     i= i+1;
-        // }
     </script>
 </body>
 </html>
