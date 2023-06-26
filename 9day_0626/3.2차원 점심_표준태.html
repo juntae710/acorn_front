@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let m = parseInt(prompt("몇 주차","0~3주차")) 
+        let w = parseInt(prompt("몇 요일","0=월요일, 1=화요일, 2=수요일, 3=목요일, 4=금요일")) 
+
+        let lunch = [["짜장면","국밥","햄버거","볶음밥","도시락"],
+                    ["피자","셀러드","김밥","죽","편밥"],
+                    ["햄버거","파스타","냉면","탕수육","토스트"],
+                    ["초밥","불고기","닭발","치킨","삼겹살"]];
+        
+        // for(let i=0; i<4; i++){
+        //     for(let f=0; f<5; f++){
+        //         alert(lunch[m][w]);
+                
+        //     }break;
+        // }
+        alert(lunch[m][w]); 
+
+    </script>
+</body>
+</html>

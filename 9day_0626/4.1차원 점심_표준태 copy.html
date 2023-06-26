@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let w = prompt("몇 주차","ex)1~4");
+        let d = parseInt(prompt("몇 요일","0=월요일, 1=화요일, 2=수요일, 3=목요일, 4=금요일")) 
+
+        let week1 = ["짜장면","국밥","햄버거","볶음밥","도시락"];
+        let week2 = ["피자","셀러드","김밥","죽","편밥"];
+        let week3 = ["햄버거","파스타","냉면","탕수육","토스트"];
+        let week4 = ["초밥","불고기","닭발","치킨","삼겹살"];
+        
+        if(w==1){
+            alert(week1[d])
+        }else if(w==2){
+            alert(week2[d])
+        }else if(w==3){
+            alert(week3[d])
+        }else if(w==4){
+            alert(week4[d])
+        };
+        
+    </script>
+</body>
+</html>
