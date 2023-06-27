@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+        let user;
+        let computer;
+        
+        for(let i=0; i<3; i++){
+            user = prompt("0~100중 하나를 고르시오.","기회는 3번")
+            computer =Math.floor( Math.random()*101);
+            if(user==computer){
+                alert("정답입니다.");
+                break;
+            }else if(user>computer){
+                alert("down.");
+            }else if(user<computer){
+                alert("up.");
+            }
+        }
+       
+    </script>
+</body>
+</html>
