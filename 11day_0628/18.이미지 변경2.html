@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <img src="./boy.png" id="img">
+    <button onclick="changeImg()" >바꾸기</button>
+
+    <script>
+        let flag=true;
+        function changeImg(){
+            
+            let pimg = document.getElementById("img");
+           
+            if(flag==true){
+                pimg.src="./girl.png";
+                flag=false;
+            }else{
+                pimg.src="./boy.png";
+                flag=true;
+            }
+
+
+        }
+    </script>
+</body>
+</html>
