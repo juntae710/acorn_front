@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <ul>
+        <!-- 태그에 직접 리스너 작성하는 법 -->
+        <li onclick="func1()">aa</li>
+    </ul>
+    <ul>
+        <li id="li1">bb</li>
+    </ul>
+
+
+    <script>
+
+        function func1(){
+            alert("li");
+        }
+
+        //동적으로 이벤트 처리하는 방법
+        let li1= document.getElementById("li1");
+
+
+        // 콜백함수, 1 함수를 작성한다. 함수의 이름을적는다.
+        //          2 함수를 익명으로 작성한다.
+        //이벤트 리스너(이벤트 이름 , 콜백함수)
+        li1.addEventListener("click", func2)
+
+        function func2(){
+            alert("li event");
+        }
+    </script>
+</body>
+</html>

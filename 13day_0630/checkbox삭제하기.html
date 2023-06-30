@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="checkbox" name="" id="">
+    <input type="checkbox" name="" id="">
+    <input type="checkbox" name="" id="">
+    <input type="checkbox" name="" id="">
+    <input type="checkbox" name="" id="">
+
+
+    <button onclick="selDelete()">선택삭제</button>
+
+
+
+    <script>
+        function selDelete(){
+            let checkboxs = document.querySelectorAll("input[type='checkbox']");
+            // checkboxs
+            // alert(checkboxs.length);
+            let p = document.querySelector("body");
+           
+            for (let i=0; i<checkboxs.length; i++){
+                //i=0 첫번째 checbox
+                let checkbox= checkboxs[i] ;
+                if(checkbox.checked == true){
+                    alert("선택");
+                    p.removeChild(checkbox);
+                }
+            }
+        }
+    </script>
+</body>
+</html>

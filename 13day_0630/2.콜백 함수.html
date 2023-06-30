@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //고차 함수 ()
+
+        // 매개변수로 함수를 받을 수 있다. 매개변수받은 함수 콜백함수
+        function hello(f){
+            alert("1초 후에 실행해주께")
+            f();
+        }
+
+        function messageKo(){
+            alert("안녕하세요");
+        }
+
+
+        function messageEng(){
+            alert("hi");
+        }
+
+        hello(messageKo);
+        hello(messageEng);
+
+        // 콜백함수 , 시간(1초 = 함수 명만 적기ㅉ
+
+
+        //1.함수를 만든다.
+        function aFunc(){
+            alert("배고파");
+        }
+        
+        setTimeout( aFunc, 1000);
+        //2. 익명으로 함수를 만든다.
+        setTimeout( function(){
+            alert("꼬르륵");
+        },2000);
+
+        setTimeout(() => alert("밥묵자"), 3000);
+    </script>
+</body>
+</html>
