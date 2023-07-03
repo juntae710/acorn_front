@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+       function myforEach(f){
+        let arr= ["apple","banana","mango"]
+
+        for(let i=0; i<arr.length; i++){
+            f(arr[i],i);
+        };
+
+
+
+       }
+
+       //함수를 적성해서 넘겨줌
+       
+       //1.함수이름을 사용해서 넘겨줌
+      
+
+        //함수 이름 : a 매개변수: item,index <=입력정보 2개
+       function a(item, index){
+            alert(item + "" + index);
+       }
+       myforEach(a);
+
+
+
+        //2. 익명 함수로 넘겨줌
+
+       myforEach( function(item, i){
+            alert("요소" + item + "index" + i);
+       });
+        
+       
+
+
+
+
+       
+
+     
+    </script>
+</body>
+</html>

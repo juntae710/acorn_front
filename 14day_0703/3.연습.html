@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let arr= ["apple","banana","mango"];
+
+        alert(arr[0]);
+        alert(arr[1]);
+        alert(arr[2]);
+
+
+        for(let i=0; i<arr.length; i++){
+            alert(arr[i] + "" + i);
+        }
+
+
+        arr.forEach(function(item, index){
+            alert(item + "" + index);
+        });
+
+        arr.forEach(func1);
+
+        function func1(a,b){
+            alert(a + "" + b);
+        }
+
+    </script>
+</body>
+</html>
