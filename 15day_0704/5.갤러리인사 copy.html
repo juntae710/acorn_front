@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .slide div{
+           display: none;
+        }
+    </style>
+    <script>
+        // Window.addEventListener("load",function(){})
+        let msg =[];
+        let index=-1;
+        window.addEventListener("load", function(){
+            let slide_items = document.querySelectorAll(".slide-item");
+            for(let i=0; i<slide_items.length; i++){
+                let message= slide_items[i].innerHTML;
+                
+                msg[i]=message;
+            }
+            console.log(msg);
+        })
+        function changeMsg(){
+            // alert("sad");
+            index++;
+            if(index >= msg.length){
+                index=0;
+            }
+            let slide = document.querySelector('.slide');
+            slide.innerHTML = msg[index];
+        }
+    </script>
+</head>
+<body>
+    <div class="gallery-wrap">
+
+        <div class="slide">
+            <div class="slide-item">여름이 왔네요</div>
+            <div class="slide-item">프론트 프로젝트 시작 몇일전 !!</div>
+            <div class="slide-item">밖은 덥지만 에이콘은 시원해요</div>
+            <div class="slide-item">여기가 천국 즐코!!</div>
+        </div>
+
+    </div>
+    <button onclick="changeMsg()">sad</button>
+  
+</body>
+</html>

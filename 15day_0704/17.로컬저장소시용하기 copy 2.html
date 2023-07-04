@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+    <script>
+        let search=["원숭이","코끼리","코뿔소","고양이"];
+        
+        let result = JSON.stringify(search);
+
+        localStorage.setItem("searchs", result);
+
+        let sSearchs = localStorage.getItem("searchs");
+        alert("저장소에서 꺼내온 데이터 ======" +sSearchs);
+
+        let osSearchs = JSON.parse(sSearchs);
+        console.log(osSearchs);
+    </script>
+   
+</body>
+</html>

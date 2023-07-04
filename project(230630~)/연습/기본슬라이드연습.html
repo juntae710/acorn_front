@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        img{
+            width: 300px;
+            height: 300px;
+        }
+        .slide_wrapper{
+            position: relative;
+            width: 960px;
+            margin: 0 auto;
+            height: 300px;
+            overflow: hidden;
+        }
+        .slides{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2610px;
+            transition:left 0.5s ease-out;
+        }
+        .slides li:not(:last-child){
+            float: left;
+            margin-right: 30px ;
+        }
+        .controls{
+            text-align: center;
+            margin-top: 50px;
+        }
+        .controls span{
+
+            
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            margin: 0 1px;
+            top: 50%;
+           
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="slide_wrapper">
+        <ul class="slides">
+            <li>
+                <img class="sliderimg" src="../img/연습.png" alt="">
+            </li>
+            <li>
+                <img class="sliderimg" src="../img/연습 2.png" alt="">
+            </li>
+            <li>
+                <img class="sliderimg" src="../img/연습.png" alt="">
+            </li>
+            <li>
+                <img class="sliderimg" src="../img/연습 2.png" alt="">
+            </li>
+            <li>
+                <img class="sliderimg" src="../img/연습.png" alt="">
+            </li>
+        </ul>
+        
+    </div>
+    <p class="controls">
+        <span class="prev">prev</span>
+        <span class="next">next</span>
+    </p>
+
+    <script>
+        var slides = document.querySelector(".slides"),
+            slide = document.querySelectorAll(".slides li"),
+            currentIdx = 0,
+            slideCount = slide.length,
+            prevBtn = document.querySelector(".prev"),
+            nextBtn = document.querySelector(".next"),
+            slideWidth = 300,
+            slideMargin = 30;
+
+        slides.style.width = (slideWidth+slideMargin)*slideCount - slideMargin + "px";
+
+        function moveSlide (num){
+            slides.style.left = -num * 330 + "px";
+            currentIdx = num;
+        }
+        nextBtn.addEventListener("click", function(){
+            if(currentIdx < slideCount -3){
+                moveSlide(currentIdx + 1); 
+                console.log(currentIdx)
+            }else{
+                moveSlide(0);
+            }
+        });
+        prevBtn.addEventListener("click", function(){
+            if(currentIdx > 0){
+                moveSlide(currentIdx - 1); 
+                
+            }else{
+                moveSlide( slideCount -3);
+            }
+        });
+    </script>
+</body>
+</html>
