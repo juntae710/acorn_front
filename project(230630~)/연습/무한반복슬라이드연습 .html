@@ -13,14 +13,14 @@
             list-style: none;
         }
         img{
-            width: 300px;
-            height: 300px;
+            width: 200px;
+            height: 200px;
         }
         .slide_wrapper{
             position: relative;
-            width: 960px;
+            width: 660px;
             margin: 0 auto;
-            height: 300px;
+            height: 200px;
             overflow: hidden;
         }
         .slides{
@@ -28,6 +28,9 @@
             left: 0;
             top: 0;
             width: 2610px;
+            
+        }
+        .slides.animated{
             transition:left 0.5s ease-out;
         }
         .slides li:not(:last-child){
@@ -54,7 +57,7 @@
 </head>
 <body>
     <div class="slide_wrapper">
-        <ul class="slides">
+        <ul class="slides ">
             <li>
                 <img class="sliderimg" src="../img/연습.png" alt="">
             </li>
@@ -83,33 +86,44 @@
             slide = document.querySelectorAll(".slides li"),
             currentIdx = 0,
             slideCount = slide.length,
+            slideWidth = 200,
+            slideMargin = 30,
             prevBtn = document.querySelector(".prev"),
-            nextBtn = document.querySelector(".next"),
-            slideWidth = 300,
-            slideMargin = 30;
+            nextBtn = document.querySelector(".next");
+           
 
-        slides.style.width = (slideWidth+slideMargin)*slideCount - slideMargin + "px";
-
-        function moveSlide (num){
-            slides.style.left = -num * 330 + "px";
-            currentIdx = num;
+        makeClone();
+        
+        function makeClone(){
+            for(var i=0; i < slideCount; i++){
+                var cloneSlide = slide[i].cloneNode(true);
+                cloneSlide.classList.add("clone");
+                slides.appendChild(cloneSlide);
+            }
+            for(var i = slideCount -1; i>=0; i-- ){
+                var cloneSlide = slide[i].cloneNode(true);
+                cloneSlide.classList.add("clone");
+                slides.prepend(cloneSlide);
+            }
+            upadteWidth();
+            serInitalpos();
+            setTimeout(function(){
+                slides.classList.add("animated");
+            })
+            
         }
-        nextBtn.addEventListener("click", function(){
-            if(currentIdx < slideCount -3){
-                moveSlide(currentIdx + 1); 
-                console.log(currentIdx)
-            }else{
-                moveSlide(0);
-            }
-        });
-        prevBtn.addEventListener("click", function(){
-            if(currentIdx > 0){
-                moveSlide(currentIdx - 1); 
-                
-            }else{
-                moveSlide( slideCount -3);
-            }
-        });
+        function upadteWidth(){
+            var currentSlides = document.querySelectorAll(".slides li");
+            var newSlideCount = currentSlides.length;
+
+            var newWidth = (slideWidth + slideMargin)*newSlideCount - slideMargin + 'px';
+            slide.style.width = newWidth;
+        }
+        function serInitalpos(){
+            var initialTranslateValue = (slideWidth + slideMargin)*slideCount;
+            //slide {transForm:translateX(-1000px);}
+            slide.style.transForm ="translateX("+initialTranslateValue+" px)";
+        }
     </script>
 </body>
 </html>
