@@ -79,10 +79,14 @@
 
         let img=["./img/인터프리터.png" , "./img/장교와 스파이.png" ,  "./img/오리지널 특별관.png"];
         let indexs=[0,1,2];
-
+        let slides  =  document.querySelectorAll(".slide-item");   
+            function ii(){
+            slides[1].style.backgroundImage="url('"+img[1]+"')";
+            }
+            
         function next(){
             let slides  =  document.querySelectorAll(".slide-item");   
-
+            
             // indexs배열의 각 요소 1증가
             for( let i=0; i<indexs.length ; i++){  
                 if( indexs[i] ==indexs.length -1){

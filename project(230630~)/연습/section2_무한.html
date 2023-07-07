@@ -14,7 +14,7 @@
     .jt_전체{
       
       width: 100%;
-      height: 10000px;
+      height: 1000px;
       background-color:  #1b1b1b;
     }
     .jt_header{
@@ -94,18 +94,6 @@
         <div class="jt_img"><img src="../img/빌딩숲의 감시자들.png"></div>
         <div class="jt_img"><img src="../img/오리지널 특별관.png"></div>
         <div class="jt_img"><img src="../img/장교와 스파이.png"></div>
-        <div class="jt_img"><img src="../img/빌딩숲의 감시자들.png"></div>
-        <div class="jt_img"><img src="../img/오리지널 특별관.png"></div>
-        <div class="jt_img"><img src="../img/장교와 스파이.png"></div>
-        <div class="jt_img"><img src="../img/빌딩숲의 감시자들.png"></div>
-        <div class="jt_img"><img src="../img/오리지널 특별관.png"></div>
-        <div class="jt_img"><img src="../img/장교와 스파이.png"></div>
-        <div class="jt_img"><img src="../img/빌딩숲의 감시자들.png"></div>
-        <div class="jt_img"><img src="../img/오리지널 특별관.png"></div>
-        <div class="jt_img"><img src="../img/장교와 스파이.png"></div>
-        <div class="jt_img"><img src="../img/빌딩숲의 감시자들.png"></div>
-        <div class="jt_img"><img src="../img/오리지널 특별관.png"></div>
-        <div class="jt_img"><img src="../img/장교와 스파이.png"></div>
       </div>
       <div class="jt_prev-btn"><</div>
       <div class="jt_next-btn">></div>
@@ -121,32 +109,52 @@
     let jt_nextBtn = document.querySelector('.jt_next-btn');
     let jt_stop = document.querySelector('.jt_stop');
     let jt_i = document.querySelector('.jt_i');
+    let jt_re = document.querySelectorAll('.jt_박스')
     let currentTranslate = 0;
-
-
+    
+    //처음 이미지 위치 지정
     function jt_str(){
-      currentTranslate -= 8470;
+      currentTranslate -= 950;
       jt_box.style.transform = `translateX(${currentTranslate}px)`;
     }
     jt_str()
-    
-    jt_nextBtn.addEventListener('click', () => {
-      
-      // jt_i.src="../img/점2.png";
+    //점 바뀌는 func
+    let jt_flag2= 2;
+    function jt_next(){
+      if(jt_flag2==1){
+        jt_i.src="../img/점1.png";
+        jt_flag2++
+      }else if(jt_flag2==2){
+        jt_i.src="../img/점2.png";
+        jt_flag2++
+      }else if(jt_flag2==3){
+        jt_i.src="../img/점3.png";
+        jt_flag2=1
+      };
+    };
+    function jt_prev(){
+      if(jt_flag2==1){
+        jt_i.src="../img/점2.png";
+        jt_flag2=3
+      }else if(jt_flag2==2){
+        jt_i.src="../img/점3.png";
+        jt_flag2--
+      }else if(jt_flag2==3){
+        jt_i.src="../img/점1.png";
+        jt_flag2--
+      };
+    }
 
-      //  for(let i=1; i>4; i++){
-      //   if(i<4){
-      //     jt_i.src="../img/점" +2+ ".png";
-      //   }else{
-      //     i=0
-      //     jt_i.src="../img/점" +1 + ".png";
-      //   }
-      // };
+
+    //버튼 클릭시 앞 뒤
+    jt_nextBtn.addEventListener('click', () => {
+      jt_next();
       currentTranslate -= 1258;
       jt_box.style.transform = `translateX(${currentTranslate}px)`;
     });
 
     jt_prevBtn.addEventListener('click', () => {
+      jt_prev();
       currentTranslate += 1250;
       jt_box.style.transform = `translateX(${currentTranslate}px)`;
     });
@@ -154,45 +162,32 @@
     //타이머 
     
     let loopInterval = setInterval(() => {
-      
+      jt_next();
       currentTranslate -= 1258;
       jt_box.style.transform = `translateX(${currentTranslate}px)`; // 다음 슬라이드를 보여주는 함수
     }, 1000,);
-    
-      // 슬라이드에 마우스가 올라간 경우 루프 멈추기
-    // jt_stop.addEventListener("click", () => {
-    //   clearInterval(loopInterval);
-    // });
-
-    // 슬라이드에서 마우스가 나온 경우 루프 재시작하기
-    // jt_stop.addEventListener("click", () => {
-    //   loopInterval = setInterval(() => {
-    //     currentTranslate -= 1258;
-    //     jt_box.style.transform = `translateX(${currentTranslate}px)`
-    //   }, 3000);
-    // });
-    
-    let jt_flag= true
+    //정지 재생 이미지
+    let jt_flag1= true;
 		function jt_toggle(){
 			let jt_stop = document.querySelector('.jt_stop');
       
-			if(jt_flag==true){
+			if(jt_flag1==true){
 				jt_stop.src="../img/재생.png";
         clearInterval(loopInterval);
-       
-
-				jt_flag=false
-			}else if(jt_flag==false){
+     
+				jt_flag1=false
+			}else if(jt_flag1==false){
 				jt_stop.src="../img/정지.png";
-        let loopInterval = setInterval(() => {
+        loopInterval = setInterval(() => {
+        jt_next();
         currentTranslate -= 1258;
         jt_box.style.transform = `translateX(${currentTranslate}px)`; // 다음 슬라이드를 보여주는 함수
         }, 1000,);
-				jt_flag=true
+				jt_flag1=true
 			}
 			
 		}
-
+    slides.style.left = -(currentIdx + 2) * (slideWidth + slideMargin) + 'px';
   </script>
 
 </body>

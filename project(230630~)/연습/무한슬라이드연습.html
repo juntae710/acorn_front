@@ -13,14 +13,14 @@
             list-style: none;
         }
         img{
-            width: 200px;
-            height: 200px;
+            width: 300px;
+            height: 300px;
         }
         .slide_wrapper{
             position: relative;
-            width: 660px;
+            width: 960px;
             margin: 0 auto;
-            height: 200px;
+            height: 300px;
             overflow: hidden;
         }
         .slides{
@@ -28,9 +28,6 @@
             left: 0;
             top: 0;
             width: 2610px;
-            
-        }
-        .slides.animated{
             transition:left 0.5s ease-out;
         }
         .slides li:not(:last-child){
@@ -57,7 +54,7 @@
 </head>
 <body>
     <div class="slide_wrapper">
-        <ul class="slides ">
+        <ul class="slides">
             <li>
                 <img class="sliderimg" src="../img/연습.png" alt="">
             </li>
@@ -86,44 +83,33 @@
             slide = document.querySelectorAll(".slides li"),
             currentIdx = 0,
             slideCount = slide.length,
-            slideWidth = 200,
-            slideMargin = 30,
             prevBtn = document.querySelector(".prev"),
-            nextBtn = document.querySelector(".next");
-           
+            nextBtn = document.querySelector(".next"),
+            slideWidth = 300,
+            slideMargin = 30;
 
-        makeClone();
-        
-        function makeClone(){
-            for(var i=0; i < slideCount; i++){
-                var cloneSlide = slide[i].cloneNode(true);
-                cloneSlide.classList.add("clone");
-                slides.appendChild(cloneSlide);
-            }
-            for(var i = slideCount -1; i>=0; i-- ){
-                var cloneSlide = slide[i].cloneNode(true);
-                cloneSlide.classList.add("clone");
-                slides.prepend(cloneSlide);
-            }
-            upadteWidth();
-            serInitalpos();
-            setTimeout(function(){
-                slides.classList.add("animated");
-            })
-            
-        }
-        function upadteWidth(){
-            var currentSlides = document.querySelectorAll(".slides li");
-            var newSlideCount = currentSlides.length;
+        slides.style.width = (slideWidth+slideMargin)*slideCount - slideMargin + "px";
 
-            var newWidth = (slideWidth + slideMargin)*newSlideCount - slideMargin + 'px';
-            slide.style.width = newWidth;
+        function moveSlide (num){
+            slides.style.left = -num * 330 + "px";
+            currentIdx = num;
         }
-        function serInitalpos(){
-            var initialTranslateValue = (slideWidth + slideMargin)*slideCount;
-            //slide {transForm:translateX(-1000px);}
-            slide.style.transForm ="translateX("+initialTranslateValue+" px)";
-        }
+        nextBtn.addEventListener("click", function(){
+            if(currentIdx < slideCount -3){
+                moveSlide(currentIdx + 1); 
+                console.log(currentIdx)
+            }else{
+                moveSlide(0);
+            }
+        });
+        prevBtn.addEventListener("click", function(){
+            if(currentIdx > 0){
+                moveSlide(currentIdx - 1); 
+                
+            }else{
+                moveSlide( slideCount -3);
+            }
+        });
     </script>
 </body>
 </html>
